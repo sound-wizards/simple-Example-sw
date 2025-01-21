@@ -1,32 +1,23 @@
-# Prerequisites
-*.d
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+}
 
-# Precompiled Headers
-*.gch
-*.pch
+void loop() {
+  // put your main code here, to run repeatedly:
+  hello();
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+  int A = 4;
+  int AA = 7;
+  Serial.println(add(A,AA));
+  delay(1000);
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+}
+void hello(){
+  Serial.println("hello");
+  delay(1000);
+}
+int add(int a,int b){
+  return a+b;
+}
